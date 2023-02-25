@@ -1,0 +1,279 @@
+/*TAG SELECTORS*/
+
+body{
+    margin: 0; /*Bütün marginleri (kenar boşluklarını) 0 pixele ayarlar. div'deki background renginin tam yukarı yapışmasını sağlıyo*/
+    text-align: center; /*bütün block elementleri (h1, paragraf vs.) ortalamak için*/
+    font-family: 'Merriweather', serif;
+    background-color: #B4E4FF;
+    font-size: large;
+    font-weight: bold;
+    color: #40514E;
+}
+
+h1{
+    /*width: 10%;
+    margin: 0 auto 0 auto; //sırasıyla: top, right, bottom, left. Right ve left auto bir şekilde ortalansın demek */
+    margin-top: 50px; /*Buluttan 50px uzak olsun diye*/
+    margin-bottom: -20px; /*ben buldum, programmer yazısı 20px yaklaşsın diye*/
+
+    font-family: 'Sacramento', cursive; /*El yazısı*/
+    font-size: 5.625rem; /*font-size: 562.5%;*/
+    color: #66bfbf;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /*40px*/
+    font-weight: normal; /*Yazının kalınlığını kaldırmak için*/
+    color: #66bfbf;
+}   
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+hr{
+    border-style: none; /*her taraf none olsun sadece top dotted olsun*/
+    border-top-style: dotted; /*ya da: border-style: dotted none none*/
+    border-color: gray;
+    border-width: 10px; /*büyüklüğünü belirliyo*/
+    width: 5%; /*genişliğini belirliyo (kaç tane olucağını)*/
+
+    margin: 100px auto 100px auto;
+}
+
+/*************************************************************/
+
+/*CLASS SELECTORS*/
+
+.topContainer{
+    /*background-color: #B4E4FF;*/
+    /*background-color: #E8D5C4;*/
+    background-color: #eaf6f6;
+    position: relative; /*içindeki şeylerin parentı olsun ki içerdekiler positiion: absolute; diyip buna göre konum bildirsin*/
+    padding-top: 50px; /*padding = dolgu, yukarının rengini doldurur*/
+    margin-bottom: 100px; /*bi sonraki div yani resimle arada 50px boşluk bırak*/
+}
+
+.top-cloud{
+    position: absolute; /*topContainer'e göre(parent'a göre) pozisyonlansın diye. Bu yüzden topContainer'a position: relative denildi*/
+    right: 450px;
+    top: 50px;
+}
+
+.bottom-cloud{
+    position: absolute; /*topContainer'e göre(parent'a göre) pozisyonlansın diye. Bu yüzden topContainer'a position: relative denildi*/
+    left: 500px;
+    bottom: 300px; /*topContainerda position: relative; demezsen sayfaya göre bottom ayarlıyo*/
+}
+
+.skill-row{
+    width: 50%; /*sayfanın %50 sini kaplasın diye*/
+    margin: 75px auto 75px auto; /*sırasıyla: top, right, bottom, left. Right ve left auto bir şekilde ortalansın, yukardan 75px, aşağıdan 75px boşluk bırakılsın demek */
+    text-align: left; /*Yazılar sola yazık olsun diye*/
+    line-height: 2; /*yazının kapladığı satır sayısı, yazılar birbirine çok yakın olmasın diye*/
+}
+
+/*Sonradan ekledim*/
+.education-row{
+    width: 50%; /*sayfanın %50 sini kaplasın diye*/
+    margin: 75px auto 75px auto; /*sırasıyla: top, right, bottom, left. Right ve left auto bir şekilde ortalansın, yukardan 75px, aşağıdan 75px boşluk bırakılsın demek */
+    text-align: left; /*Yazılar sola yazık olsun diye*/
+}
+
+.sabanci-photo{
+    float: left;
+    width: 40%;
+    margin-right: 30px;
+}
+
+.middle-line{
+    margin-top: 150px;
+}
+
+/******************************************************/
+
+/*Benim eklediklerim*/
+
+.university{
+    font-style: italic;
+    font-size: large;
+    color: blue;
+    text-decoration: underline;
+}
+
+.myImg{
+    height: 250px;
+    width: 250px;
+}
+
+.cPlusPlusPhoto{
+    /*height: 200px;
+    width: 200px;*/
+    width: 25%; /*parentına göre yani div'ine göre %25 ayarlar*/
+    transition: transform 0.3s ease-in-out; /* Geçiş efekti ayarlar */
+    float: left; /*Resmi sola, yazıyı sağa almak için*/
+    margin-right: 30px; /*Resimle yazı arasına mesafe koymak için*/
+}
+  
+.cPlusPlusPhoto:hover{
+    transform: scale(1.2); /*Resmi %20 oranında büyütür*/
+}
+
+.html-photo{
+    transition: transform 0.3s ease-in-out; /* Geçiş efekti ayarlar */
+
+    float: right; /*Resmi sağa, yazıyı sola almak için*/
+    /*margin-left: 30px;*/
+
+    position: relative; /*olması gereken yerden 50px yukarı almak için, bottom: 50px dersen aşağıdan 50px itmiş olursun*/
+    bottom: 20px;
+}
+
+.html-photo:hover{
+    transform: scale(1.2); /*Resmi %20 oranında büyütür*/
+}
+
+.css-photo{
+    height: 225px;
+    width: 150px; 
+
+    transition: transform 0.3s ease-in-out; /* Geçiş efekti ayarlar */
+
+    float: right; /*Resmi sağa, yazıyı sola almak için*/
+    margin-left: 30px; /*HTML resminden uzaklaşmak için*/
+
+    position: relative; /*olması gereken yerden 50px yukarı almak için, bottom: 50px dersen aşağıdan 50px itmiş olursun*/
+    bottom: 20px;
+}
+
+.css-photo:hover{
+    transform: scale(1.2); /*Resmi %20 oranında büyütür*/
+}
+
+.btn{
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+}
+
+/*ben ekledim*/
+.references{
+    background-color: #66BFBF;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.linked-in{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-decoration: none; /*altındaki yazıyı kaldırmak için*/
+}
+
+.linked-in:hover{
+    color: #eaf6f6;
+    /*color: blue;*/
+}
+
+.copyRight{
+    color: #eaf6f6;
+}
+/******************************************************/
+
+/*SITEYLE ALAKALI DEĞİL, EKSTRA*/
+/*The box model of website styling: Padding, margin vs.*/
+
+/*
+.simpleDiv{
+    height: 300px; 
+    width: 300px;
+    background: turquoise;
+
+    width: 10%;
+
+    position:relative;
+    top: 5px;
+
+    
+    border: solid;
+    border-width: 50px;
+    border-top: 0px;
+    border-width: 0px 10px 20px 30px; //clock-wise: top, right, bottom, left
+    
+
+    border: solid;
+    border-width: 30px;
+    padding: 50px; //Dolgu
+    margin: 20px;
+}
+*/
+
+/*Relative ve absolute positioning*/
+/*GENEL KURAL: parent div'e positioning: relative; de ki hem normal pozisyonuna göre sayfada kaydırabil 
+***hem de içindeki div'lerde position: absolute; diyerek childlerın parent'a göre konumlanmasını sağla.*/
+/*
+.parent{
+    height: 400px; 
+    width: 400px;
+    background-color: black;
+
+    position: relative;
+    left: 500px;
+}
+
+.box1{
+    height: 100px;
+    width: 100px;  
+    background-color: red;
+
+    position: absolute;
+    right: 50px;
+}
+
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+
+    position: absolute;
+    right: 150px;
+    top: 100px;
+}
+
+.box3{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+
+    position: absolute;
+    right: 250px;
+    top: 200px;
+}
+*/
+
+
+
+
